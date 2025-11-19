@@ -50,7 +50,7 @@ def marks_matrix(students_marks: dict[str, int]) -> list[list[int | str]]:
     return matrix
 
 
-def lowest_highest(marks: dict[str, int]) -> list[list[int | int]]:
+def lowest_highest(marks: dict[str, int]) -> list[tuple(int | int)]:
     """
     Builds a list showing the lowest mark alongside the number of students that were given that score.
 
