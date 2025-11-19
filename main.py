@@ -50,37 +50,7 @@ def marks_matrix(students_marks: dict[str, int]) -> list[list[int | str]]:
     return matrix
 
 
-students_marks = {
-    "Alice": 7, "Bob": 9, "Charlie": 3, "Diana": 7, "Ethan": 4,
-    "Fiona": 3, "George": 7, "Hannah": 6, "Ian": 5, "Julia": 3,
-    "Kevin": 9, "Laura": 7, "Michael": 0, "Nina": 7, "Oliver": 5,
-    "Paula": 3, "Quentin": 2, "Rachel": 0, "Samuel": 10, "Tina": 5,
-    "Uma": 1, "Victor": 1, "Wendy": 8, "Xavier": 6, "Yvonne": 0,
-    "Zachary": 2, "Aaron": 3, "Beth": 10, "Carl": 7, "Deborah": 9,
-    "Edward": 6, "Faith": 3, "Gordon": 1, "Helen": 10, "Isaac": 2,
-    "Janet": 2, "Kyle": 3, "Lily": 9, "Martin": 6, "Nancy": 2,
-    "Oscar": 4, "Patricia": 8, "Ronald": 10, "Sophia": 2, "Thomas": 9,
-    "Ursula": 9, "Vera": 8, "William": 0, "Xenia": 1, "Yosef": 1
-}
-
-def main():
-    """
-    The main function of the program.
-    """
-
-    # TODO - Show average score
-    # TODO - Show most often score
-    # TODO - Show least often score
-    # TODO - Show highest and lowest score
-    marks = marks_matrix(students_marks)
-    for mark in marks:
-        print(mark)
-
-if __name__ == "__main__":
-    main()
-
-
-def lower_higher(marks: dict[str, int]) -> list[list[int | int]]:
+def lowest_highest(marks: dict[str, int]) -> list[list[int | int]]:
     """
     Builds a list showing the lowest mark alongside the number of students that were given that score.
 
@@ -110,3 +80,37 @@ def lower_higher(marks: dict[str, int]) -> list[list[int | int]]:
     list_lower_higher.append((highest[0], highest_count))
 
     return list_lower_higher
+
+
+students_marks = {
+    "Alice": 7, "Bob": 9, "Charlie": 3, "Diana": 7, "Ethan": 4,
+    "Fiona": 3, "George": 7, "Hannah": 6, "Ian": 5, "Julia": 3,
+    "Kevin": 9, "Laura": 7, "Michael": 0, "Nina": 7, "Oliver": 5,
+    "Paula": 3, "Quentin": 2, "Rachel": 0, "Samuel": 10, "Tina": 5,
+    "Uma": 1, "Victor": 1, "Wendy": 8, "Xavier": 6, "Yvonne": 0,
+    "Zachary": 2, "Aaron": 3, "Beth": 10, "Carl": 7, "Deborah": 9,
+    "Edward": 6, "Faith": 3, "Gordon": 1, "Helen": 10, "Isaac": 2,
+    "Janet": 2, "Kyle": 3, "Lily": 9, "Martin": 6, "Nancy": 2,
+    "Oscar": 4, "Patricia": 8, "Ronald": 10, "Sophia": 2, "Thomas": 9,
+    "Ursula": 9, "Vera": 8, "William": 0, "Xenia": 1, "Yosef": 1
+}
+
+
+def main():
+    """
+    The main function of the program.
+    """
+
+    # TODO - Show average score
+    # TODO - Show most often score
+    # TODO - Show least often score
+    # TODO - Show highest and lowest score
+    marks = marks_matrix(students_marks)
+    for mark in marks:
+        print(mark)
+
+    print(lowest_highest(students_marks))
+
+
+if __name__ == "__main__":
+    main()
