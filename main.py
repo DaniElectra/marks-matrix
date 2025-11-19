@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-def marks_matrix(students_marks: dict[str, int]) -> list[list[int | str]]:
+def marks_matrix(students_marks: dict[str, int]) -> list[tuple[int | str]]:
     """
     Builds an ordered list of lists for each score given alongside the students that have obtained such score.
 
@@ -50,7 +50,7 @@ def marks_matrix(students_marks: dict[str, int]) -> list[list[int | str]]:
     return matrix
 
 
-def lowest_highest(marks: dict[str, int]) -> list[list[int | int]]:
+def lowest_highest(marks: dict[str, int]) -> list[tuple(int | int)]:
     """
     Builds a list showing the lowest mark alongside the number of students that were given that score.
 
