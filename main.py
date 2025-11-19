@@ -20,6 +20,23 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
+def average_score(students_marks: dict[str, int]) -> float:
+    """
+    Calculates the average score of all students.
+
+    Args:
+        students_marks: dict[str, int]
+            A dictionary whose keys are each student's name with the value being their score.
+
+    Returns:
+        The average score as a float.
+        Example: {"Sarah": 7, "Leo": 3} -> 5.0
+    """
+    total = sum(students_marks.values())
+    count = len(students_marks)
+    return total / count if count > 0 else 0.0
+
 def marks_matrix(students_marks: dict[str, int]) -> list[list[int | str]]:
     """
     Builds an ordered list of lists for each score given alongside the students that have obtained such score.
@@ -109,7 +126,8 @@ def main():
     for mark in marks:
         print(mark)
 
-    print(lowest_highest(students_marks))
+    print("Lowest and highest:", lowest_highest(students_marks))
+    print("Avarage score:", avarege_score(students_marks))
 
 
 if __name__ == "__main__":
